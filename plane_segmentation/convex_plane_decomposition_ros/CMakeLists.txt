@@ -25,6 +25,9 @@ find_package(OpenCV REQUIRED)
 # Eigen
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
+# GMP
+find_package(GMP 4.2 QUIET)
+
 # Cpp standard version
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -126,4 +129,5 @@ add_executable(${PROJECT_NAME}_TestShapeGrowing
 target_link_libraries(${PROJECT_NAME}_TestShapeGrowing
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
+  gmp
 )
